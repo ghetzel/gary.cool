@@ -1,0 +1,206 @@
+intents:
+- state: Frameworks & Services
+  projects:
+  - name:  Diecast
+    url:   https://github.com/ghetzel/diecast
+    lang:  golang
+    docs:  https://ghetzel.github.io/diecast
+    icon:  https://raw.githubusercontent.com/ghetzel/diecast/master/docs/src/assets/img/diecast-logo-light-bg-48.png
+    blurb: Web templating framework and standalone template rendering server.
+    tags:
+    - web-development
+    - templating
+    - libraries
+
+  - name:  Pivot
+    url:   https://github.com/ghetzel/pivot
+    docs:  https://godoc.org/github.com/ghetzel/pivot
+    lang:  golang
+    blurb: Federated database abstraction service.
+    tags:
+    - databases
+    - web-development
+    - libraries
+
+  - name:  Webfriend
+    url:   https://github.com/ghetzel/go-webfriend
+    docs:  https://godoc.org/github.com/ghetzel/go-webfriend
+    icon:  https://raw.githubusercontent.com/ghetzel/go-webfriend/master/ui/img/webfriend-48.png
+    lang:  golang
+    blurb: Selenium-like Google Chrome automation environment.
+    tags:
+    - libraries
+    - web-automation
+    - friendscript
+
+- state: Libraries
+  projects:
+  - name:  go-stockutil
+    url:   https://github.com/ghetzel/go-stockutil
+    docs:  https://godoc.org/github.com/ghetzel/go-stockutil
+    lang:  golang
+    blurb: Overbuilt kitchen sink library with many, many helper functions.
+    tags:
+    - libraries
+    - overengineering
+
+  - name:  Friendscript
+    url:   https://github.com/ghetzel/friendscript
+    docs:  https://godoc.org/github.com/ghetzel/friendscript
+    lang:  golang
+    blurb: An embeddable scripting language.
+    tags:
+    - libraries
+    - web-automation
+    - google-chrome
+    - chromium
+
+  - name:  Argonaut
+    url:   https://github.com/ghetzel/argonaut
+    docs:  https://github.com/ghetzel/argonaut/blob/master/README.md
+    lang:  golang
+    blurb: A library for generating and parsing complex command line invocations in a structured manner.
+    tags:
+    - libraries
+    - command-line
+
+  - name:  shmtool
+    url:   https://github.com/ghetzel/shmtool
+    docs:  https://godoc.org/github.com/ghetzel/shmtool/shm
+    lang:  golang
+    blurb: A library and command line utility for interacting with Linux SysV-style shared memory segments.
+    tags:
+    - linux
+    - sysv
+    - x11
+    - libraries
+
+- state: Small Utilities
+  projects:
+  - name:  sysfact
+    url:   https://github.com/ghetzel/sysfact
+    docs:  https://github.com/ghetzel/sysfact/blob/master/README.md
+    lang:  golang
+    blurb: Operating system data collection for systems administration and inventory automation.
+    tags:
+    - utilities
+    - devops
+    - sysadmin
+
+  - name:  Command Deck
+    url:   https://github.com/ghetzel/command-deck
+    docs:  https://github.com/ghetzel/command-deck/blob/master/README.md
+    lang:  golang
+    blurb: A Powerline-inspired PS1 terminal prompt generator.
+    tags:
+    - utilities
+    - customization
+    - bash
+
+  - name:  Reacter
+    url:   https://github.com/ghetzel/reacter
+    docs:  https://github.com/ghetzel/reacter/blob/master/README.md
+    lang:  golang
+    blurb: A tool for generating, consuming, and handling system monitoring events.
+    tags:
+    - utilities
+    - devops
+    - sysadmin
+
+  - name:  qcat
+    url:   https://github.com/ghetzel/qcat
+    docs:  https://godoc.org/github.com/ghetzel/qcat
+    blurb: AMQP library and command line utility.
+    tags:
+    - libraries
+    - utilities
+    - amqp
+    - rabbitmq
+
+  - name:  Procwatch
+    url:   https://github.com/ghetzel/procwatch
+    lang:  golang
+    blurb: A Supervisor-compatible process manager service.
+    tags:
+    - utilities
+    - sysadmin
+    - process-manager
+
+  - name:  Autotag
+    url:   https://github.com/ghetzel/autotag
+    docs:  https://github.com/ghetzel/autotag/blob/master/README.md
+    lang:  golang
+    blurb: Automatically tag media files based on filenames and regular expressions.
+    tags:
+    - utilities
+    - media-management
+
+  - name:  Skyhook
+    url:   https://github.com/ghetzel/skyhook
+    docs:  https://github.com/ghetzel/skyhook/blob/mark3/README.md
+    lang:  shell
+    blurb: A network bootable (PXE) Linux live environment with an integrated masterless Chef client.
+    tags:
+    - sysadmin
+    - infrastructure
+    - pxe
+    - livecd
+
+- state: Incomplete or Unmaintained
+  projects:
+  - name:  Webfriend (Python)
+    url:   https://github.com/ghetzel/webfriend
+    docs:  https://github.com/ghetzel/autotag/blob/master/README.md
+    lang:  python
+    blurb: Selenium-like Google Chrome automation environment.
+    tags:
+    - libraries
+    - web-automation
+    - google-chrome
+    - friendscript
+
+  - name:  plexutil
+    url:   https://github.com/ghetzel/plexutil
+    lang:  golang
+    blurb: A utility for working with data in the Plex Media Server API from the command line.
+    tags:
+    - media-management
+    - plex
+    - utilities
+
+  - name:  Moped
+    url:   https://github.com/ghetzel/moped
+    lang:  golang
+    blurb: MPD protocol-compatible database server with pluggable backends.
+    tags:
+    - media-management
+    - mpd
+
+  - name:  Mobius
+    url:   https://github.com/ghetzel/mobius
+    blurb: Storing and rendering time-series data, forever and ever.
+    lang:  golang
+    tags:
+    - devops
+    - timeseries
+    - utilities
+
+  - name:  hashlib
+    url:   https://github.com/ghetzel/hashlib
+    lang:  ruby
+    blurb: Extends the base Ruby Hash class with new methods that offer useful functionality.
+
+  - name:  Zee
+    url:   https://github.com/ghetzel/zee
+    docs:  https://github.com/ghetzel/zee/blob/master/README.md
+    lang:  cpp
+    blurb: A sprawling attempt to write a GUI for a custom CarPC, and to learn Qt.
+    tags:
+    - overengineering
+    - qt
+    - carpc
+
+  - name:  collectd-reacter
+    url:   https://github.com/ghetzel/collectd-reacter
+    lang:  python
+    blurb: A flexible threshold detection and response plugin for collectd.

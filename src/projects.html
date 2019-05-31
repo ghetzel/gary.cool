@@ -1,0 +1,75 @@
+---
+bindings:
+-   name:     manifest
+    resource: /projects.yml
+---
+<div style="
+    display:         flex;
+    flex-flow:       row wrap;
+    justify-content: space-around;
+">
+    {{ range $m := $.bindings.manifest.intents }}
+    <section style="flex: 1; margin: 0 2em;">
+        <h2>{{ $m.state }}</h2>
+        <ul style="
+            list-style-type: none;
+            padding: 0;
+        ">
+            {{ range $p := $m.projects }}
+            <li style="
+                border-bottom:  1px solid lightgrey;
+                padding-top:    0.5em;
+                padding-bottom: 2em;
+            ">
+                {{ if $p.lang }}
+                <img
+                    style="float: right;"
+                    width="48"
+                    height="48"
+                    alt="Language: {{ $p.lang }}"
+                    title="Language: {{ $p.lang }}"
+                    src="assets/img/lang-{{ $p.lang }}.png"
+                >
+                {{ end }}
+                {{ if $p.icon }}
+                <img
+                    style="float: right;"
+                    width="48"
+                    height="48"
+                    src="{{ $p.icon }}"
+                    alt="{{ $p.name }} Logo"
+                    title="{{ $p.name }} Logo"
+                >
+                {{ end }}
+                <h3 style="
+                    display:        inline-block;
+                    margin:         0;
+                    margin-bottom:  0.25em;
+                ">
+                    <a style="
+                        color:           #333333;
+                        text-decoration: none;
+                        border-bottom:   1px dotted dimgray;
+                    " href="{{ $p.url }}">{{ $p.name }}</a>
+                </h3>
+
+                <div>
+                    {{ range $i, $tag := sort $p.tags }}
+                    <i style="
+                        color:     grey;
+                        font-size: small;
+                    ">{{ $tag }}{{ if not (isLastElement $i $p.tags) }}, {{ end }}</i>
+                    {{ end }}
+                </div>
+
+                <p style="clear: both;">{{ $p.blurb }}</p>
+
+                {{ if $p.docs }}
+                <a href="{{ $p.docs }}">Documentation</a>
+                {{ end }}
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
+</div>
