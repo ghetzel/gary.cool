@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+
+        body{
+            background: linear-gradient(45deg, #fbe8dd, #f5eae1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sunset{
+            position: relative;
+            width: 90vmin;
+            height: 60vmin;
+            background: radial-gradient(90vmin circle at 50% 57%, #fff 5%, #FFE460 8%, #FF7519 90%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 2%;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .water{
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 340vmin;
+            height: 15vmin;
+            background: radial-gradient(ellipse at 50% 50%, #60BFFF, #26547C 90%);
+            border-radius: 100%;
+            &:after{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+                display: block;
+                content: '';
+                width: 40vmin;
+                height: 80vmin;
+                background: radial-gradient(ellipse at 50% 0%,  rgba(255, 255, 255, 0.35), transparent 30%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sunset">
+        <h1>&#x41D;&#x435;&#x442; &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x438; &#x440;&#x430;&#x441;&#x441;&#x442;&#x440;&#x430;&#x438;&#x432;&#x430;&#x442;&#x44C;&#x441;&#x44F;.</h1>
+        <h1>&#x644;&#x64A;&#x633; &#x647;&#x646;&#x627;&#x643; &#x62D;&#x627;&#x62C;&#x629; &#x644;&#x644;&#x636;&#x64A;&#x642;.</h1>
+        <h1>&#xE44;&#xE21;&#xE48;&#xE08;&#xE33;&#xE40;&#xE1B;&#xE47;&#xE19;&#xE15;&#xE49;&#xE2D;&#xE07;&#xE2D;&#xE32;&#xE23;&#xE21;&#xE13;&#xE4C;&#xE40;&#xE2A;&#xE35;&#xE22;</h1>
+        <h1>&#x6C92;&#x6709;&#x5FC5;&#x8981;&#x611F;&#x5230;&#x6CAE;&#x55AA;&#x3002;</h1>
+        <h1>&#x52D5;&#x63FA;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</h1>
+        <h1>&#x909;&#x926;&#x93E;&#x938; &#x939;&#x94B;&#x928;&#x947; &#x915;&#x947; &#x932;&#x93F;&#x90F; &#x915;&#x94B;&#x908; &#x915;&#x93E;&#x930;&#x923; &#x928;&#x939;&#x940;&#x902; &#x939;&#x948;&#x964;</h1>
+        <h1>&#x394;&#x3B5;&#x3BD; &#x3C5;&#x3C0;&#x3AC;&#x3C1;&#x3C7;&#x3B5;&#x3B9; &#x3BA;&#x3B1;&#x3BC;&#x3AF;&#x3B1; &#x3B1;&#x3BD;&#x3AC;&#x3B3;&#x3BA;&#x3B7; &#x3BD;&#x3B1; &#x3B5;&#x3AF;&#x3BD;&#x3B1;&#x3B9; &#x3B1;&#x3BD;&#x3B1;&#x3C3;&#x3C4;&#x3B1;&#x3C4;&#x3C9;&#x3BC;&#x3AD;&#x3BD;&#x3BF;&#x3C2;.</h1>
+        <h1>There is no need to be upset.</h1>
+        <div class="water">
+        </div>
+    </div>
+</body>
+</html>
