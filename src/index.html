@@ -1,58 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>GARY DOT COOL</title>
-    <style>
-        html, body {
-            width:      100%;
-            height:     100%;
-            padding:    0;
-            margin:     0;
-            text-align: center;
-            overflow:   hidden;
-        }
-
-        .marquee {
-            font-size:         3em;
-            line-height:       50px;
-            text-align:        center;
-            width:             100%;
-            -moz-animation:    marquee 10s ease-in-out infinite;
-            -webkit-animation: marquee 10s ease-in-out infinite;
-            animation:         marquee 10s ease-in-out infinite;
-        }
-
-        footer {
-            color: grey;
-            font-size: small;
-        }
-
-        @-moz-keyframes marquee {
-            0%   { -moz-transform: translateX(100%); }
-            100% { -moz-transform: translateX(-100%); }
-        }
-
-        @-webkit-keyframes marquee {
-            0%   { -webkit-transform: translateX(100%); }
-            100% { -webkit-transform: translateX(-100%); }
-        }
-
-        @keyframes marquee {
-            0%   {
-                -moz-transform: translateX(100%);
-                -webkit-transform: translateX(100%);
-                transform: translateX(100%);
-            }
-            100% {
-                -moz-transform: translateX(-100%);
-                -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
-            }
-        }
-    </style>
-</head>
-<body>
+<div style="text-align: center;">
     <h3 class="marquee">WELCOME TO MY INTERNET WEBSITE</h3>
 
     <img src="assets/img/mission.png">
@@ -63,5 +9,4 @@
     <footer>
         &copy; {{ time `now` `2006` }} Gary Hetzel.  All rights reserved.
     </footer>
-</body>
-</html>
+</div>
