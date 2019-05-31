@@ -149,6 +149,16 @@ intents:
 
 - state: Incomplete or Unmaintained
   projects:
+  - name:  Billion Oyster Project Digital Platform
+    url:   https://github.com/BillionOysterProject/digital-platform-beta
+    docs:  https://github.com/BillionOysterProject/digital-platform-beta/wiki
+    lang:  python
+    blurb: Open data collection platform for NYC harbor restoration using oysters.
+    tags:
+    - open-data
+    - pivot
+    - diecast
+
   - name:  Webfriend (Python)
     url:   https://github.com/ghetzel/webfriend
     docs:  https://github.com/ghetzel/autotag/blob/master/README.md
