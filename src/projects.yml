@@ -149,7 +149,7 @@ intents:
 
 - state: Incomplete or Unmaintained
   projects:
-  - name:  Billion Oyster Project Digital Platform
+  - name:  Billion Oyster Project
     url:   https://github.com/BillionOysterProject/digital-platform-beta
     docs:  https://github.com/BillionOysterProject/digital-platform-beta/wiki
     lang:  python
