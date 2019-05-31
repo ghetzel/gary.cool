@@ -111,7 +111,7 @@ intents:
     url:   https://github.com/ghetzel/qcat
     docs:  https://godoc.org/github.com/ghetzel/qcat
     blurb: AMQP library and command line utility.
-	lang: golang
+    lang: golang
     tags:
     - libraries
     - utilities
