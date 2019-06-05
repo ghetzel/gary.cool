@@ -9,7 +9,7 @@ bindings:
     justify-content: space-around;
 ">
     {{ range $m := $.bindings.manifest.intents }}
-    <section style="flex: 1; margin: 0 2em;">
+    <section style="flex: 1; margin: 0 2em; min-width: 320px;">
         <h2>{{ $m.state }}</h2>
         <ul style="
             list-style-type: none;
