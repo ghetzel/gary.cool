@@ -36,18 +36,40 @@ layout: none
             text-align:      center;
         }
 
-        h1 {
-            line-height:     1.5;
-            font-size:       7vmin;
-            margin:          0;
-            padding:         0;
-            font-weight:     normal;
-            width:           65vw;
+        textarea {
+            background:  transparent;
+            border:      0;
+            color:       white;
+            font-family: 'textileregular';
+            font-size:   7vmin;
+            font-weight: normal;
+            line-height: 1.5;
+            margin:      0;
+            padding:     0;
+            text-align:  center;
+            width:       65vw;
+            display:     inline;
+            height:      auto;
+            resize:      none;
         }
     </style>
 </head>
 <body>
-    <h1>"{{ s (unbase64 (param 1)) }}"</h1>
+    <form action="/sunny">
+        <textarea
+            type="text"
+            name="m"
+            spellcheck="false"
+            autocomplete="off"
+            onkeydown="
+                if (event.keyCode == 13){
+                    this.style.display = 'none';
+                    this.value = btoa(this.value);
+                    this.form.submit();
+                }
+            "
+        >{{ s (unbase64 (qs `m` (base64 `It's Always Sunny in Philadelphia`)) `padded`) }}</textarea>
+    </form>
 
     <audio autoplay hidden>
         <source src="/assets/sound/sunny.mp3" type="audio/mpeg">
