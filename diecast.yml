@@ -1,5 +1,9 @@
 root: src
 
+patterns:
+- '*.xml'
+- '*.html'
+
 authenticators:
 -   type: basic
     paths:
@@ -7,7 +11,7 @@ authenticators:
     options:
         realm: 'Actions API'
         credentials:
-            github: '$2y$10$zolNY45C977h8czH/EFDdeKcpPVpAJOT7KjHo6kVgXfjI7z8.cT2e'
+            github: '$2y$10$44nrT6un3m8xIrrXqQBv9.7wUcadVpHckka97m65pXUP5PziLGmJK'
 
 actions:
 -   path:   /api/deploy
