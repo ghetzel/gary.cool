@@ -1,0 +1,48 @@
+root: src
+
+authenticators:
+-   type: basic
+    paths:
+    - '/api/**'
+    options:
+        realm: 'Actions API'
+        credentials:
+            github: '$2y$10$zolNY45C977h8czH/EFDdeKcpPVpAJOT7KjHo6kVgXfjI7z8.cT2e'
+
+actions:
+-   path:   /api/deploy
+    method: get
+    steps:
+    -   type: shell
+        parser: lines
+        data: |
+            #!/usr/bin/env bash
+            export PATH="/usr/local/bin:${PATH}"
+
+            echo "branch=$(git rev-parse --abbrev-ref HEAD)"
+            echo "revision=$(git rev-parse HEAD)"
+
+    -   type: process
+        data: diffuse
+
+-   path:   /api/webhooks/github
+    method: post
+    steps:
+    -   type: shell
+        data: |
+            #!/usr/bin/env bash
+            set -o errexit
+            set -o nounset
+            export PATH="/usr/local/bin:${PATH}"
+
+            ref="$(cat /dev/stdin | jq -r '.ref')"
+
+            if [ "${ref}" == "refs/heads/deploy" ]; then
+                git checkout deploy
+                git reset --hard HEAD
+                git clean -fd
+                git clean -f
+                git pull -X theirs
+            fi
+
+            exit 0
