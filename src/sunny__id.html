@@ -1,0 +1,56 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    <title>{{ or $.page.title "GARY DOT COOL" }}</title>
+    <style>
+        @font-face {
+            font-family: 'textileregular';
+            font-weight: normal;
+            font-style:  normal;
+            src: url('/assets/fonts/textile-webfont.eot');
+            src: url('/assets/fonts/textile-webfont.eot?#iefix') format('embedded-opentype'),
+                url('/assets/fonts/textile-webfont.woff2') format('woff2'),
+                url('/assets/fonts/textile-webfont.woff') format('woff'),
+                url('/assets/fonts/textile-webfont.ttf') format('truetype'),
+                url('/assets/fonts/textile-webfont.svg#textileregular') format('svg');
+        }
+
+        body {
+            width:           100vw;
+            height:          100vh;
+            margin:          0;
+            padding:         0;
+            overflow:        hidden;
+            background:      black;
+            color:           white;
+            display:         flex;
+            justify-content: center;
+            align-items:     center;
+            font-family:     'textileregular';
+            text-align:      center;
+        }
+
+        h1 {
+            line-height:     1.5;
+            font-size:       7vmin;
+            margin:          0;
+            padding:         0;
+            font-weight:     normal;
+            width:           65vw;
+        }
+    </style>
+</head>
+<body>
+    <h1>"{{ s (unbase64 (param 1)) }}"</h1>
+
+    <audio autoplay hidden>
+        <source src="/assets/sound/sunny.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
