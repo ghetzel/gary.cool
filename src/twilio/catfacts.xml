@@ -113,6 +113,10 @@ page:
     - "The claws on the cat's back paws aren't as sharp as the claws on the front paws because the claws in the back don't retract and, consequently, become worn."
     - "Cats can drink seawater."
     - "There is a show in Iceland called 'Keeping Up With the Kattarshians.' It's a cat reality show that features 4 kittens who live together in fully-furnished cat house, Big Brother-style."
+    - "Did you know that if you stacked all the cats in the world on top of each other, they would die?"
+    - "Cats are beautiful and precious creatures deserving of your love."
+    - "When cats eyes light up in the dark, this is the reflection from a special layer inside their eyes that improves night vision.  When it is dark enough, this layer emits light that can be used to kill prey at a distance."
+    - "Cats think of nothing but murder all day."
 ---<?xml version="1.0" encoding="UTF-8"?>
 <Response>
     <Say voice="woman">{{ get $.page.catfacts (random 0 (count $.page.catfacts)) }}</Say>
