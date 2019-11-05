@@ -1,6 +1,6 @@
 ssh_authorized_keys:
   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9bsssTRP/mBJjRxa6JImDPUgyC0sIZ8m9esIKvClM4pNGjDRTuvVCRa10diEEL2A9BjC2rohyNdypO+Eqxp37kho+IwdTg5d35uwTQLsFL5tGE/cHp6Q2cjeuhWX1H57ynUklAxSNgcqHYw2phsd6W8hx3NpYl4qkxPsSuayzEoiXXG5243zsoQVNxKeQCDPusfns6Xm2vjhX+/e5llzp/6YKdZ0ZZL6h/nLrIFwed+xUqOrETY3ahS8npF5vq1ePf/knM7+Baphv/v64DPXQd/UsEuL2aW83EEfepv3+FozJi72MR96f4CdlWqlmjInL+YX1JrdoDxdTsRMfDdJ2/UvK8pOLu/tXKI5uMtR9Y0HySPa28B74/C+zGt762G4XvdQMU339XjFVtOnonPVs+NnNzPIQPa5ZKgvix4to7b19jFV7OgWaSJ+fvD+oxoOp0pBoqqfpu9pL95wOF4Ct6HWkTdi/yyO6eXjHW7imxNY1Qd/7PU13PwozgIKmE5389kjI6dzWn8RVMle0B6wf01C1CFb1HgDCYD4lWV2mPA5JE+4FKZeCXQWoPSwR3o84vBjir+Ba6FO3rT9/e3axTe8DlYK4l3PmVIbD7u5e5oTCBthF0WQN0TfvvUKEG5hKa28WyAkWLgT1p1fRkwOh8u3nlcmYi6VqWHyMHi74Jw== ghetzel
-hostname: kube-{{ params 1 }}
+hostname: kube-{{ param 1 }}
 k3os:
   data_sources:
     - cdrom
