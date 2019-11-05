@@ -3,6 +3,7 @@ root: src
 patterns:
 - '*.xml'
 - '*.html'
+- '*.yaml'
 
 authenticators:
 -   type: basic
