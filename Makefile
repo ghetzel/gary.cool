@@ -1,4 +1,3 @@
-.PHONY: run bin
 .EXPORT_ALL_VARIABLES:
 
 GO111MODULE ?= on
@@ -16,3 +15,5 @@ $(DIECAST_BIN):
 
 pass:
 	htpasswd -nBC 10 $(USER)
+
+.PHONY: run bin pass $(DIECAST_BIN)

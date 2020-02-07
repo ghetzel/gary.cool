@@ -1,53 +1,54 @@
+---
 root: src
 
 patterns:
-- '*.xml'
-- '*.html'
-- '*.yaml'
+  - "*.xml"
+  - "*.html"
+  - "*.yaml"
 
 authenticators:
--   type: basic
+  - type: basic
     paths:
-    - '/api/**'
+      - "/api/**"
     options:
-        realm: 'Actions API'
-        credentials:
-            github: '$2y$10$44nrT6un3m8xIrrXqQBv9.7wUcadVpHckka97m65pXUP5PziLGmJK'
+      realm: "Actions API"
+      credentials:
+        github: "$2y$10$44nrT6un3m8xIrrXqQBv9.7wUcadVpHckka97m65pXUP5PziLGmJK"
 
 actions:
--   path:   /api/deploy
+  - path: /api/deploy
     method: get
     steps:
-    -   type: shell
+      - type: shell
         parser: lines
         data: |
-            #!/usr/bin/env bash
-            export PATH="/usr/local/bin:${PATH}"
+          #!/usr/bin/env bash
+          export PATH="/usr/local/bin:${PATH}"
 
-            echo "branch=$(git rev-parse --abbrev-ref HEAD)"
-            echo "revision=$(git rev-parse HEAD)"
+          echo "branch=$(git rev-parse --abbrev-ref HEAD)"
+          echo "revision=$(git rev-parse HEAD)"
 
-    -   type: process
+      - type: process
         data: diffuse
 
--   path:   /api/webhooks/github
+  - path: /api/webhooks/github
     method: post
     steps:
-    -   type: shell
+      - type: shell
         data: |
-            #!/usr/bin/env bash
-            set -o errexit
-            set -o nounset
-            export PATH="/usr/local/bin:${PATH}"
+          #!/usr/bin/env bash
+          set -o errexit
+          set -o nounset
+          export PATH="/usr/local/bin:${PATH}"
 
-            ref="$(cat /dev/stdin | jq -r '.ref')"
+          ref="$(cat /dev/stdin | jq -r '.ref')"
 
-            if [ "${ref}" == "refs/heads/deploy" ]; then
-                git checkout deploy
-                git reset --hard HEAD
-                git clean -fd
-                git clean -f
-                git pull -X theirs
-            fi
+          if [ "${ref}" == "refs/heads/deploy" ]; then
+              git checkout deploy
+              git reset --hard HEAD
+              git clean -fd
+              git clean -f
+              git pull -X theirs
+          fi
 
-            exit 0
+          exit 0
