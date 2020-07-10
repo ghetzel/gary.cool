@@ -11,6 +11,7 @@ page:
       name:    Gary W. Hetzel
       address: Red Hook, Brooklyn, NY
       avatar:  assets/img/avatar.png
+      email:   its@gary.cool
 
     links:
     - title: "its@gary.cool"
@@ -23,6 +24,23 @@ page:
       abbr:   "git"
       help:   "GitHub"
       target: "blank"
+
+    broadSkills:
+    - name: Backend Development
+      desc: Experience and personal interest in building flexible, high performance server-side applications with a focus on simplicity and durability.
+      rate: 5
+
+    - name: Systems Administration
+      desc: Extensive experience building, managing, and configuring Debian- and Red Hat-based Linux servers, both virtual and physical.
+      rate: 5
+
+    - name: Frontend Development
+      desc: Ability to build fast, functional browser experiences that work reliably across all major clients.
+      rate: 4
+
+    - name: DevOps and Cloud Computing
+      desc: Experience integrating projects with Cloud APIs. Independently building tooling for Kubernetes at home.
+      rate: 3
 
     jobs:
     - org:     PerformLine
@@ -251,9 +269,10 @@ page:
       <img class="avatar" src="{{ $.page.cv.contact.avatar }}">
     </header>
 
-    <h1>Contact</h1>
+    <h1>Location</h1>
     <address>{{ $.page.cv.contact.address }}</address>
 
+    <h1>Contact</h1>
     <ul>
       {{ range $link := $.page.cv.links }}
       <li>
@@ -267,6 +286,9 @@ page:
       </li>
       {{ end }}
     </ul>
+
+    <h1>Projects</h1>
+    <p><a href="/projects">Check out my open source project portfolio.</a></p>
   </nav>
 
   <article class="doc-body">
@@ -275,7 +297,19 @@ page:
       <span>{{ $.page.cv.blurb }}</span>
     </header>
 
-    <section>
+    <section class="skills-interests">
+      <h2>Industry Skills</h2>
+      <ul>
+        {{ range $si := $.page.cv.broadSkills }}
+        <li>
+          <h3>{{ $si.name }} <span class="rating">{{ range sequence $si.rate }}&#9733;{{ end }}{{ range sequence (subtract 5 $si.rate) }}&#9734;{{ end }}</span></h3>
+          <small>{{ $si.desc }}</small>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+
+    <section class="jobs">
       <h2>
         Professional Life
         <span class="modes">

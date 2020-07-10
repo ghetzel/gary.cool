@@ -1,13 +1,15 @@
 html, body {
-    background-color: #222222;
-    color:            #dddddd;
-    width:            100vw;
-    height:           100vh;
-    padding:          0;
-    margin:           0;
-    overflow-x:       hidden;
-    font-family:      'Open Sans', sans-serif;
-    font-size:        12pt;
+    /* thank you: http://www.patternify.com */
+    background:  #222222 repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAD0lEQVQImWNgQAX/yeAAAIHCA/0RE2WAAAAAAElFTkSuQmCC);
+    color:       #dddddd;
+    width:       100vw;
+    height:      100vh;
+    padding:     0;
+    margin:      0;
+    overflow-x:  hidden;
+    font-family: 'Open Sans', sans-serif;
+    font-size:   12pt;
+
 }
 
 address {
@@ -70,14 +72,18 @@ a {
 
 #visual-arena > .contact h1 {
     margin:         0.5vh 0;
-    margin-bottom:  0;
     text-transform: uppercase;
     font-size:      14pt;
 }
 
+#visual-arena > .contact > address,
+#visual-arena > .contact > div,
+#visual-arena > .contact > ul {
+    margin-bottom:  2vh;
+}
+
 #visual-arena > .contact ul {
     list-style-type: none;
-    margin:          0;
     padding:         0;
     margin-top:      1vh;
 }
@@ -85,15 +91,13 @@ a {
 #visual-arena > .contact a {
     display:         block;
     width:           100%;
-    border-radius:   0 4px;
     padding:         0.125vh;
-    height:          1.5vh;
-    line-height:     1.5vh;
+    line-height:     1.3em;
 }
 
 #visual-arena > .contact a:hover {
-    background-color: #dddddd;
-    color:            #001331;
+    background:  #dddddd repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAD0lEQVQImWNgQAX/yeAAAIHCA/0RE2WAAAAAAElFTkSuQmCC);
+    color:       black;
 }
 
 #visual-arena > .contact abbr {
@@ -264,6 +268,35 @@ a {
     background-color: #222222;
     color:            #eeeeee;
     cursor:           pointer;
+}
+
+#visual-arena > article .skills-interests ul {
+    list-style-type: none;
+    padding:         0;
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: space-around;
+}
+
+#visual-arena > article .skills-interests ul > li {
+    display:       inline-block;
+    width:         50%;
+    margin-bottom: 2vh;
+}
+
+#visual-arena > article .skills-interests ul > li h3 {
+    margin-bottom: 0.25vh;
+    font-size:     14pt;
+    font-weight:   500;
+}
+
+#visual-arena > article .skills-interests ul > li h3 .rating {
+    float:        right;
+    width:        10vw;
+    user-select:  none;
+    text-align:   right;
+    margin:       0;
+    margin-right: 1vw;
 }
 
 #visual-arena > article footer {
