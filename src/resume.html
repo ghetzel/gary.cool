@@ -1,6 +1,7 @@
 ---
 layout: printable
 page:
+  mode: "{{ qs `mode` `summary` }}"
   cv:
     blurb: "Full-stack software architect, frontend engineer, and DevOps-flavored system administrator."
 
@@ -8,94 +9,177 @@ page:
     contact:
       name:    Gary W. Hetzel
       address: Red Hook, Brooklyn, NY
+      avatar:  assets/img/avatar.png
 
     links:
     - title: "its@gary.cool"
       href:  "mailto:its@gary.cool"
       abbr:  "eml"
+      help:  "Email"
 
     - title:  "@ghetzel"
       href:   "https://github.com/ghetzel"
       abbr:   "git"
+      help:   "GitHub"
       target: "blank"
 
-    works:
+    jobs:
     - org:     PerformLine
-      desc:    Enterprise regulatory compliance management plaform
+      desc:    Enterprise regulatory compliance management platform
       loc:     Morristown, NJ
       title:   Principal Engineer
       favicon: assets/img/jobs/performline.ico
+      url:     https://performline.com
       span:
         start: 2016
         end:   present
       summary: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augueporta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+        My role at PerformLine as Principal Engineer represents my first architectural role, and the culmination of years of cross-functional experience with every aspect of ideating, designing, building, testing, and validating full-stack software systems used by engineers and clients alike.
+
+        During my time at PerformLine, I have managed and contributed to an aging Python 2.7-based Django web application, and directly worked to break this monolithic codebase into self-contained services that do one thing well.  These services were also the company's introduction to the reliability, speed, and safety offered by the Golang programming language.
+
+        I built and maintained both Python and Golang standard libraries that codify and centralize internal tasks, as well as enforce standards that make monitoring, logging, and observability a standard feature of our systems.  I have worked extensively with our engineers to steward the development of a highly-scalable and deeply flexible application ecosystem, all tied together by an event-driven architecture that forms a loosely coupled set of capabilities that we can rapidly deploy to meet changing business and client needs.
+
+      skills:
+      - Ubuntu 16.04
+      - Amazon Web Services (EC2, DynamoDB, RDS, S3, ECR+EKS)
+      - Golang 1.14
+      - PostgreSQL 11.x
+      - Google Chrome DevTools Protocol (CDP)
+      - Python 2.7 & 3.6
+      - Django 1.x
 
     - org:     Shutterstock, Inc.
       desc:    Stock media marketplace
       favicon: assets/img/jobs/shutterstock.ico
       loc:     New York, NY
       title:   Infrastructure Engineer
+      url:     https://shutterstock.com
       span:
         start: 2014
         end:   2016
       summary: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augue porta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+        At Shutterstock, I continued my journey into highly-available high-traffic application delivery.  Shutterstock presented new challenges, as the nature of the platform prioritized the reliable downloading of very large files to our customers.  This is a distinctly different problem domain than what I encountered at Outbrain, because the size of the data was orders of magnitude larger at Shutterstock, leading to longer connections and more emphasis on network-level optimization and a deep understanding of the specifics of how TCP and HTTP work.
+
+        In addition to working with a mid-sized team of engineers on all manner of technical problems, I headed up the Infrastructure Tooling group to design and build a Infrastructure-as-a-Service (IaaS) platform to make managing our KVM-backed virtual machines simpler for us, but also to offer a self-service interface within the much larger (150+) Shutterstock engineering community.  During my time here, I built and deployed this platform; providing centralized server inventory, service discovery, low-level network management, and cloud integration features to the company at a time when similar ideas were starting to come to fruition in the wider industry (among them being Docker and Kubernetes.)
+
+      skills:
+      - Apache Cassandra
+      - Elasticsearch
+      - GitHub Enterprise
+      - Ruby on Rails
+      - Golang 1.1
+      - AngularJS
+      - KVM/libvirt virtualization
+      - CentOS 6.x
+      - Juniper Networking
 
     - org:     Outbrain
-      desc:    Content recommendation engine
+      desc:    Web content recommendation engine
       favicon: assets/img/jobs/outbrain.ico
       loc:     New York, NY
       title:   Infrastructure Engineer
+      url:     https://outbrain.com
       span:
         start: 2012
         end:   2014
       summary: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augue porta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+        My move to Outbrain immersed me in the still nascent DevOps scene, and was also my first time dealing with extremely demanding and high-performance application delivery requirements.  The Outbrain platform was placed on the homepages of several very high traffic properties, including USA Today and CNN.  This meant that we had digital real estate on some of the most visted pages on the web, and with that came the responsibility to deliver our content near the theoretical limits of information trasmission over the Internet.
+
+        Once again, I found myself building internal web applications, this time for system adminstrators and infrastructure management teams.  My primary project, <i>Onering</i>, was a scalable yet flexible inventory management system to track our rapidly-growing bare metal infrastructure that was deployed in three colocated datacenters across the continental US.  This application became vital to our operations as we moved physical locations on a number of occasions into better facilities, and elimintated whole classes of management and chain of custody issues inherent in the chaotic, hands-on process of moving physical servers from one place to another.
+
+      skills:
+      - Ruby on Rails
+      - Apache Cassandra
+      - MongoDB
+      - Elasticsearch
+      - AngularJS
+      - Graphite timeseries database
+      - RabbitMQ
+      - CentOS 5.x
 
     - org:     Bedford, Freeman, and Worth Publishing Group
       desc:    Higher education arm of Macmillan Publishing
       loc:     New York, NY
       title:   Web Operations Engineer
       favicon: assets/img/jobs/bfw.ico
+      url:     https://bfwpub.com
       span:
         start: 2011
       summary: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augue porta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+        I transitioned into my role at BFW/Macmillan as a step up from my work at Converseon.  Here is where I was first immersed in the idosyncrasies of corporate professional life.  My job as Web Operations Engineer was fairly open-ended, with a wide variety of tasks coming our way that included database administration, SQL query optimization, and performing manual hands-on code deployments from a distributed development team to the live production environment.
+
+        As time went on, I noted that certain tedious and time consuming tasks could be done quicker and more safely using automation.  I was given the opportunity to build a web application and backend worker queue that codified our sundry deployment processes into a fully-automated, well commented sequence of tasks.  By the end of my tenure with the organization, this platform was being used directly by developers and the business to stage and push code changes without my team's intervention, save for maintenance and occasional troubleshooting.
+
+      skills:
+      - Ruby on Rails
+      - Microsoft SQL Server
+      - Redis
+      - CentOS 4.x
+      - Microsoft Windows Server 2003
 
     - org:     Converseon, Inc.
       desc:    Social listening platform
       loc:     New York, NY
       title:   Web Developer, R&D
       favicon: assets/img/jobs/converseon.png
+      url:     https://converseon.com
       span:
         start: 2010
       summary: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augue porta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+        My time at Converseon was both my first job in NYC, as well as my first exposure to an advertising-focused agency business.  Here is where I first got worked with data at a scale beyond what could fit on a single server.  I worked with the R&D team based in Ann Arbor, MI as well as directly with Account Representatives in the Midtown office.  I was engaged with a variety of small projects, largely around using scripting and programming approaches to manage WordPress site content for our clients.  I also started working more closely with the R&D team towards improving performance and operability of the MySQL-backed social data platform we were building, and was introduced to the Sphinx fulltext indexing engine and its capabilities.
+
+      skills:
+      - MySQL
+      - Git version control
+      - WordPress templates and administration
+      - Sphinx fulltext indexing
+      - Linux shell and text utilities
 
     - org:     Liberty Science Center
       loc:     Jersey City, NJ
       desc:    Science museum
       title:   Webmaster & Database Administrator
       favicon: assets/img/jobs/lsc.png
+      url:     https://lsc.org
       span:
         start: 2007
         end:   2009
       summary: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augue porta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+        My role at Liberty Science Center represents my first professional experience in a technical environment at a large organization.  Here I spent a lot of time growing into the role, learning the ins and outs of both nonprofit and corporate life.  I was primarily responsible for managing content on the museum's website (<a href="https://lsc.org" target="blank">lsc.org</a>), and later was tasked with the implementation and deployment of a total redesign.  It was my job to take the creative coming from our in-house graphics design team and put it on the Internet.
+
+        I was also a general purpose developer and database administrator for our IT and Systems teams, a role that I distinguished myself in by building internal web applications that were used by the Exhibition Maintenance team to track, troubleshoot, and control the over 250 distinct Windows PC-based public exhibits on display throughout the museum.
+
+      skills:
+      - MySQL
+      - Relational data modelling
+      - Linux system adminstration
+      - Ruby on Rails
+      - Subversion version control
+      - Slackware Linux
+      - Microsoft Windows Server 2003
+      - Microsoft Active Directory
 ---
+{{ $jobs := $.page.cv.jobs }}
+{{ if eqx $.page.mode `story` }}{{ $jobs = reverse $jobs }}{{ end }}
 <div id="visual-arena">
   <nav class="contact">
+    <header>
+      <img class="avatar" src="{{ $.page.cv.contact.avatar }}">
+    </header>
+
     <h1>Contact</h1>
-    <address>
-      <abbr title="Location">loc:&nbsp;</abbr>{{ $.page.cv.contact.address }}
-    </address>
+    <address>{{ $.page.cv.contact.address }}</address>
 
     <ul>
       {{ range $link := $.page.cv.links }}
       <li>
-        <a href="{{ $link.href }}" target="{{ or $link.target `self` }}">
-          <abbr title="{{ $link.help }}">{{ $link.abbr }}:&nbsp;</abbr>{{ $link.title }}
+        <a
+          href="{{ $link.href }}"
+          title="{{ $link.help }}"
+          target="{{ or $link.target `self` }}"
+        >
+          <abbr>{{ $link.abbr }}:&nbsp;</abbr>{{ $link.title }}
         </a>
       </li>
       {{ end }}
@@ -109,22 +193,42 @@ page:
     </header>
 
     <section>
-      <h2>Professional Experience</h2>
+      <h2>
+        Professional Life
+        <span class="modes">
+          <a class="{{ if eqx $.page.mode `summary` }}selected{{ end }}" href="?mode=summary">Recent</a>
+          <a class="{{ if eqx $.page.mode `story` }}selected{{ end }}" href="?mode=story">Story</a>
+        </span>
+      </h2>
       <ol>
-        {{ range $work := $.page.cv.works }}
+        {{ range $job := $jobs }}
         <li>
-          <div>
-            <time>{{ $work.span.start }}{{ if $work.span.end }}</time>&ndash;<time>{{ $work.span.end }}{{ end }}</time>
+          <div class="jobtime">
+            <time>{{ $job.span.start }}{{ if $job.span.end }}</time>&ndash;<time>{{ $job.span.end }}{{ end }}</time>
           </div>
-          <div>
-            <h3>{{ $work.title }}</h3>
-            <h4><img src="{{ $work.favicon }}"> {{ $work.org }}</h4>
-            <h5>{{ $work.desc }}</h5>
-            <p>{{ $work.summary }}</p>
+          <div class="jobdesc">
+            <h3>{{ $job.title }}</h3>
+            <h4><img src="{{ $job.favicon }}"> {{ $job.org }}</h4>
+            <h5>{{ $job.desc }}</h5>
+            <a target="blank" href="{{ $job.url }}">{{ urlHost $job.url }}</a>
+            <p>{{ sanitize $job.summary }}</p>
+            {{- if $job.skills }}
+            <ul>
+              {{ range $pt := $job.skills }}
+              <li>{{ $pt }}</li>
+              {{ end }}
+            </ul>
+            {{- end }}
           </div>
         </li>
         {{ end }}
       </ol>
     </section>
+
+    <footer>
+      This page was lovingly hand-crafted using vanilla HTML, CSS, and the <a target="blank" href="https://github.com/ghetzel/diecast">Diecast</a> web framework.
+      <br>
+      Copyright &copy; {{ now "2006" }} Gary Hetzel. All rights reserved.
+    </footer>
   </article>
 </div>
