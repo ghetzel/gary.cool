@@ -247,13 +247,20 @@ a {
 #visual-arena > article li .jobdesc > ul > li {
     display:          inline-block;
     width:            auto;
-    background-color: #dddddd;
     margin:           0.25vw;
-    padding:          0.25vw;
-    border-radius:    0.5vw;
 }
 
-#visual-arena > article li .jobdesc > ul > li:hover {
+#visual-arena > article li .jobdesc > ul a {
+    border-radius:    0.5vw;
+    background-color: #dddddd;
+    display:          inline-block;
+    width:            100%;
+    height:           100%;
+    padding:          0.25vw;
+    text-align:       center;
+}
+
+#visual-arena > article li .jobdesc > ul a:hover {
     background-color: #222222;
     color:            #eeeeee;
     cursor:           pointer;
