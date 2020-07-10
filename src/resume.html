@@ -1,7 +1,8 @@
 ---
 layout: printable
 page:
-  mode: "{{ qs `mode` `summary` }}"
+  mode:  "{{ qs `mode` `summary` }}"
+  title: "Gary W. Hetzel: Resume/CV"
   cv:
     blurb: "Full-stack software architect, frontend engineer, and DevOps-flavored system administrator."
 
@@ -41,13 +42,27 @@ page:
         I built and maintained both Python and Golang standard libraries that codify and centralize internal tasks, as well as enforce standards that make monitoring, logging, and observability a standard feature of our systems.  I have worked extensively with our engineers to steward the development of a highly-scalable and deeply flexible application ecosystem, all tied together by an event-driven architecture that forms a loosely coupled set of capabilities that we can rapidly deploy to meet changing business and client needs.
 
       skills:
-      - Ubuntu 16.04
-      - Amazon Web Services (EC2, DynamoDB, RDS, S3, ECR+EKS)
-      - Golang 1.14
-      - PostgreSQL 11.x
-      - Google Chrome DevTools Protocol (CDP)
-      - Python 2.7 & 3.6
-      - Django 1.x
+      - label: Ubuntu 16.04
+        link:  https://en.wikipedia.org/wiki/Ubuntu
+
+      - label: Amazon Web Services (EC2, DynamoDB, RDS, S3, ECR+EKS)
+        link:  https://en.wikipedia.org/wiki/Amazon_Web_Services
+
+      - label: Golang 1.14
+        link:  https://golang.org/
+
+      - label: PostgreSQL 11.x
+        link:  https://www.postgresql.org/
+
+      - label: Google Chrome DevTools Protocol (CDP)
+        link:  https://chromedevtools.github.io/devtools-protocol/
+
+      - label: Python 2.7 & 3.6
+        link:  https://www.python.org/about/
+
+      - label: Django 1.x
+        link:  https://www.djangoproject.com/
+
 
     - org:     Shutterstock, Inc.
       desc:    Stock media marketplace
@@ -64,15 +79,29 @@ page:
         In addition to working with a mid-sized team of engineers on all manner of technical problems, I headed up the Infrastructure Tooling group to design and build a Infrastructure-as-a-Service (IaaS) platform to make managing our KVM-backed virtual machines simpler for us, but also to offer a self-service interface within the much larger (150+) Shutterstock engineering community.  During my time here, I built and deployed this platform; providing centralized server inventory, service discovery, low-level network management, and cloud integration features to the company at a time when similar ideas were starting to come to fruition in the wider industry (among them being Docker and Kubernetes.)
 
       skills:
-      - Apache Cassandra
-      - Elasticsearch
-      - GitHub Enterprise
-      - Ruby on Rails
-      - Golang 1.1
-      - AngularJS
-      - KVM/libvirt virtualization
-      - CentOS 6.x
-      - Juniper Networking
+      - label: Apache Cassandra
+        link:  https://en.wikipedia.org/wiki/Apache_Cassandra
+
+      - label: Elasticsearch
+        link:  https://en.wikipedia.org/wiki/Elasticsearch
+
+      - label: GitHub Enterprise
+        link:  https://github.com/enterprise
+
+      - label: Ruby Sinatra
+        link:  https://en.wikipedia.org/wiki/Sinatra_(software)
+
+      - label: Golang 1.1
+        link:  https://golang.org/
+
+      - label: AngularJS 1.x
+        link:  "https://en.wikipedia.org/wiki/AngularJS#Development_history"
+
+      - label: KVM/libvirt virtualization
+        link:  https://en.wikipedia.org/wiki/Libvirt
+
+      - label: CentOS 6.x
+        link:  https://en.wikipedia.org/wiki/CentOS
 
     - org:     Outbrain
       desc:    Web content recommendation engine
@@ -89,14 +118,29 @@ page:
         Once again, I found myself building internal web applications, this time for system adminstrators and infrastructure management teams.  My primary project, <i>Onering</i>, was a scalable yet flexible inventory management system to track our rapidly-growing bare metal infrastructure that was deployed in three colocated datacenters across the continental US.  This application became vital to our operations as we moved physical locations on a number of occasions into better facilities, and elimintated whole classes of management and chain of custody issues inherent in the chaotic, hands-on process of moving physical servers from one place to another.
 
       skills:
-      - Ruby on Rails
-      - Apache Cassandra
-      - MongoDB
-      - Elasticsearch
-      - AngularJS
-      - Graphite timeseries database
-      - RabbitMQ
-      - CentOS 5.x
+      - label: Ruby Sinatra
+        link:  https://en.wikipedia.org/wiki/Sinatra_(software)
+
+      - label: Apache Cassandra
+        link:  https://en.wikipedia.org/wiki/Apache_Cassandra
+
+      - label: MongoDB
+        link:  https://en.wikipedia.org/wiki/MongoDB
+
+      - label: Elasticsearch
+        link:  https://en.wikipedia.org/wiki/Elasticsearch
+
+      - label: AngularJS 1.x
+        link:  "https://en.wikipedia.org/wiki/AngularJS#Development_history"
+
+      - label: Graphite timeseries database
+        link:  https://en.wikipedia.org/wiki/Graphite_(software)
+
+      - label: RabbitMQ
+        link:  https://www.rabbitmq.com/
+
+      - label: CentOS 5.x
+        link:  https://en.wikipedia.org/wiki/CentOS
 
     - org:     Bedford, Freeman, and Worth Publishing Group
       desc:    Higher education arm of Macmillan Publishing
@@ -112,11 +156,20 @@ page:
         As time went on, I noted that certain tedious and time consuming tasks could be done quicker and more safely using automation.  I was given the opportunity to build a web application and backend worker queue that codified our sundry deployment processes into a fully-automated, well commented sequence of tasks.  By the end of my tenure with the organization, this platform was being used directly by developers and the business to stage and push code changes without my team's intervention, save for maintenance and occasional troubleshooting.
 
       skills:
-      - Ruby on Rails
-      - Microsoft SQL Server
-      - Redis
-      - CentOS 4.x
-      - Microsoft Windows Server 2003
+      - label: Ruby Sinatra
+        link:  https://en.wikipedia.org/wiki/Sinatra_(software)
+
+      - label: Microsoft SQL Server
+        link:  https://en.wikipedia.org/wiki/Microsoft_SQL_Server
+
+      - label: Redis
+        link:  https://en.wikipedia.org/wiki/Redis
+
+      - label: CentOS 4.x
+        link:  https://en.wikipedia.org/wiki/CentOS
+
+      - label: Microsoft Windows Server 2003
+        link:  https://en.wikipedia.org/wiki/Windows_Server_2003
 
     - org:     Converseon, Inc.
       desc:    Social listening platform
@@ -130,11 +183,20 @@ page:
         My time at Converseon was both my first job in NYC, as well as my first exposure to an advertising-focused agency business.  Here is where I first got worked with data at a scale beyond what could fit on a single server.  I worked with the R&D team based in Ann Arbor, MI as well as directly with Account Representatives in the Midtown office.  I was engaged with a variety of small projects, largely around using scripting and programming approaches to manage WordPress site content for our clients.  I also started working more closely with the R&D team towards improving performance and operability of the MySQL-backed social data platform we were building, and was introduced to the Sphinx fulltext indexing engine and its capabilities.
 
       skills:
-      - MySQL
-      - Git version control
-      - WordPress templates and administration
-      - Sphinx fulltext indexing
-      - Linux shell and text utilities
+      - label: MySQL
+        link:  https://www.mysql.com/
+
+      - label: Git version control
+        link:  https://en.wikipedia.org/wiki/Git
+
+      - label: WordPress templates and administration
+        link:  https://en.wikipedia.org/wiki/WordPress
+
+      - label: Sphinx fulltext indexing
+        link:  https://sphinxsearch.com/
+
+      - label: Linux shell and text utilities
+        link:  https://en.wikipedia.org/wiki/GNU_Core_Utilities
 
     - org:     Liberty Science Center
       loc:     Jersey City, NJ
@@ -151,14 +213,29 @@ page:
         I was also a general purpose developer and database administrator for our IT and Systems teams, a role that I distinguished myself in by building internal web applications that were used by the Exhibition Maintenance team to track, troubleshoot, and control the over 250 distinct Windows PC-based public exhibits on display throughout the museum.
 
       skills:
-      - MySQL
-      - Relational data modelling
-      - Linux system adminstration
-      - Ruby on Rails
-      - Subversion version control
-      - Slackware Linux
-      - Microsoft Windows Server 2003
-      - Microsoft Active Directory
+      - label: MySQL
+        link:  https://www.mysql.com/
+
+      - label: Relational data modelling
+        link:  https://en.wikipedia.org/wiki/Relational_model
+
+      - label: Linux system adminstration
+        link:  https://en.wikipedia.org/wiki/Cowsay
+
+      - label: Ruby on Rails
+        link:  https://en.wikipedia.org/wiki/Ruby_on_Rails
+
+      - label: Subversion version control
+        link:  https://en.wikipedia.org/wiki/Apache_Subversion
+
+      - label: Slackware Linux
+        link:  https://en.wikipedia.org/wiki/Slackware
+
+      - label: Microsoft Windows Server 2003
+        link:  https://en.wikipedia.org/wiki/Windows_Server_2003
+
+      - label: Microsoft Active Directory
+        link:  https://en.wikipedia.org/wiki/Active_Directory
 ---
 {{ $jobs := $.page.cv.jobs }}
 {{ if eqx $.page.mode `story` }}{{ $jobs = reverse $jobs }}{{ end }}
@@ -214,8 +291,8 @@ page:
             <p>{{ sanitize $job.summary }}</p>
             {{- if $job.skills }}
             <ul>
-              {{ range $pt := $job.skills }}
-              <li>{{ $pt }}</li>
+              {{ range $skill := $job.skills }}
+              <li><a href="{{ $skill.link }}" target="blank">{{ $skill.label }}</a></li>
               {{ end }}
             </ul>
             {{- end }}
