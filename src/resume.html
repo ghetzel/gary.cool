@@ -1,0 +1,130 @@
+---
+layout: printable
+page:
+  cv:
+    blurb: "Full-stack software architect, frontend engineer, and DevOps-flavored system administrator."
+
+    # ...seriously how often do you expect this data to change?
+    contact:
+      name:    Gary W. Hetzel
+      address: Red Hook, Brooklyn, NY
+
+    links:
+    - title: "its@gary.cool"
+      href:  "mailto:its@gary.cool"
+      abbr:  "eml"
+
+    - title:  "@ghetzel"
+      href:   "https://github.com/ghetzel"
+      abbr:   "git"
+      target: "blank"
+
+    works:
+    - org:     PerformLine
+      desc:    Enterprise regulatory compliance management plaform
+      loc:     Morristown, NJ
+      title:   Principal Engineer
+      favicon: assets/img/jobs/performline.ico
+      span:
+        start: 2016
+        end:   present
+      summary: |
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augueporta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+
+    - org:     Shutterstock, Inc.
+      desc:    Stock media marketplace
+      favicon: assets/img/jobs/shutterstock.ico
+      loc:     New York, NY
+      title:   Infrastructure Engineer
+      span:
+        start: 2014
+        end:   2016
+      summary: |
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augue porta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+
+    - org:     Outbrain
+      desc:    Content recommendation engine
+      favicon: assets/img/jobs/outbrain.ico
+      loc:     New York, NY
+      title:   Infrastructure Engineer
+      span:
+        start: 2012
+        end:   2014
+      summary: |
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augue porta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+
+    - org:     Bedford, Freeman, and Worth Publishing Group
+      desc:    Higher education arm of Macmillan Publishing
+      loc:     New York, NY
+      title:   Web Operations Engineer
+      favicon: assets/img/jobs/bfw.ico
+      span:
+        start: 2011
+      summary: |
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augue porta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+
+    - org:     Converseon, Inc.
+      desc:    Social listening platform
+      loc:     New York, NY
+      title:   Web Developer, R&D
+      favicon: assets/img/jobs/converseon.png
+      span:
+        start: 2010
+      summary: |
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augue porta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+
+    - org:     Liberty Science Center
+      loc:     Jersey City, NJ
+      desc:    Science museum
+      title:   Webmaster & Database Administrator
+      favicon: assets/img/jobs/lsc.png
+      span:
+        start: 2007
+        end:   2009
+      summary: |
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus viverra lectus eget augue porta, eu finibus tellus iaculis. Suspendisse viverra mollis orci finibus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur et hendrerit magna. Suspendisse mi ligula, ultricies vitae magna in, malesuada facilisis lorem. Cras lacinia urna a dapibus dignissim. Nulla facilisi. Vivamus accumsan pretium tincidunt.
+---
+<div id="visual-arena">
+  <nav class="contact">
+    <h1>Contact</h1>
+    <address>
+      <abbr title="Location">loc:&nbsp;</abbr>{{ $.page.cv.contact.address }}
+    </address>
+
+    <ul>
+      {{ range $link := $.page.cv.links }}
+      <li>
+        <a href="{{ $link.href }}" target="{{ or $link.target `self` }}">
+          <abbr title="{{ $link.help }}">{{ $link.abbr }}:&nbsp;</abbr>{{ $link.title }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+
+  <article class="doc-body">
+    <header>
+      <h1>{{ $.page.cv.contact.name }}</h1>
+      <span>{{ $.page.cv.blurb }}</span>
+    </header>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <ol>
+        {{ range $work := $.page.cv.works }}
+        <li>
+          <div>
+            <time>{{ $work.span.start }}{{ if $work.span.end }}</time>&ndash;<time>{{ $work.span.end }}{{ end }}</time>
+          </div>
+          <div>
+            <h3>{{ $work.title }}</h3>
+            <h4><img src="{{ $work.favicon }}"> {{ $work.org }}</h4>
+            <h5>{{ $work.desc }}</h5>
+            <p>{{ $work.summary }}</p>
+          </div>
+        </li>
+        {{ end }}
+      </ol>
+    </section>
+  </article>
+</div>
