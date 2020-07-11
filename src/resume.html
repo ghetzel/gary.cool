@@ -302,7 +302,7 @@ page:
       <ul>
         {{ range $si := $.page.cv.broadSkills }}
         <li>
-          <h3>{{ $si.name }} <span class="rating">{{ range sequence $si.rate }}&#9733;{{ end }}{{ range sequence (subtract 5 $si.rate) }}&#9734;{{ end }}</span></h3>
+          <h3>{{ $si.name }} <!--<span class="rating">{{ range sequence $si.rate }}&#9733;{{ end }}{{ range sequence (subtract 5 $si.rate) }}&#9734;{{ end }}</span>--></h3>
           <small>{{ $si.desc }}</small>
         </li>
         {{ end }}
