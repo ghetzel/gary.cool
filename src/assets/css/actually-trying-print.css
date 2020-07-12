@@ -1,3 +1,204 @@
-@media print {
+@media print, screen and (max-width: 1279px) {
+    .inline-contact {
+        display:         flex;
+        justify-content: space-around;
+        align-items:     center;
+        width:           50%;
+        margin:          0 auto;
+    }
 
+    html, body {
+        background:  transparent;
+        color:       initial;
+        width:       auto;
+        height:      auto;
+        padding:     auto;
+        overflow-x:  auto;
+        font-family: 'Open Sans', sans-serif;
+        font-size:   11pt;
+    }
+
+    #visual-arena {
+        flex-direction: column;
+        height:         auto;
+        width:          auto;
+    }
+
+    #visual-arena > .contact {
+        display: none;
+    }
+
+    #visual-arena > article {
+        box-shadow:         none;
+        background-color:   transparent;
+        color:              inherit;
+        flex:               1;
+        padding:            0;
+        margin:             0;
+        overflow:           hidden;
+        -ms-overflow-style: initial;
+        scrollbar-width:    initial;
+    }
+
+    #visual-arena > article header {
+        text-align: center;
+    }
+
+    #visual-arena > article header > h1 {
+        margin:        0;
+        font-size:     28pt;
+    }
+
+    #visual-arena > article header > span {
+        display:        block;
+        font-size:      14pt;
+        margin:         0 auto;
+        text-transform: none;
+        width:          75%;
+    }
+
+    #visual-arena > article::-webkit-scrollbar {
+        display: initial;
+    }
+
+    #visual-arena > article .modes {
+        display: none;
+    }
+
+    #visual-arena > article h2 {
+        margin-top:       0.5em;
+        margin-bottom:    0.5em;
+        padding:          0;
+        text-transform:   uppercase;
+        font-weight:      500;
+        color:            #333333;
+        letter-spacing:   0.25em;
+        word-spacing:     0.25em;
+        border-bottom:    2px solid #cccccc;
+        text-align:       center;
+    }
+
+    #visual-arena > article p {
+        margin-bottom: 0.5em;
+        margin-left:   0;
+        font-size:     11pt;
+    }
+
+    #visual-arena > article .skills-interests {
+        display: inline;
+    }
+
+    #visual-arena > article .skills-interests ul {
+        margin: 0;
+    }
+
+    #visual-arena > article .skills-interests ul > li {
+        margin-bottom: 0.5em;
+    }
+
+    #visual-arena > article ol {
+        display: block;
+    }
+
+    #visual-arena > article ol li {
+        display:        block;
+        margin-bottom:  0.5em;
+        clear:          both;
+    }
+
+    #visual-arena > article li .jobtime {
+        flex:          1;
+        padding-right: 0;
+        margin-bottom: 0.25em;
+        font-size:     12pt;
+        font-weight:   normal;
+    }
+
+    #visual-arena > article .jobdesc h3 {
+        display: inline;
+    }
+
+    #visual-arena > article .jobdesc h4::before {
+        display: inline;
+        content: " at ";
+    }
+
+    #visual-arena > article .jobdesc h4 {
+        display:     inline;
+        font-size:   12pt;
+        margin:      0;
+        font-weight: normal;
+    }
+
+    #visual-arena > article .jobdesc h4 a {
+        display: none;
+    }
+
+    #visual-arena > article .jobdesc h4 img {
+        display:   none;
+    }
+
+    #visual-arena > article .jobdesc h5::before {
+        content: "(";
+    }
+
+    #visual-arena > article .jobdesc h5 {
+        display:     inline;
+        margin:      0;
+        font-weight: normal;
+    }
+
+    #visual-arena > article .jobdesc h5::after {
+        content: ")";
+    }
+
+    #visual-arena > article .jobdesc h5 + a {
+        display: none;
+    }
+
+    #visual-arena > article li .jobdesc {
+        border-bottom:  2px solid #cccccc;
+        padding-bottom: 0em;
+    }
+
+    #visual-arena > article li .jobdesc > ul::before {
+        content:       "Skills Developed:";
+        display:       block;
+        color:         inherit;
+        margin:        0;
+        margin-bottom: 0.25em;
+        font-size:     14pt;
+        font-weight:   500;
+    }
+
+    #visual-arena > article li .jobdesc > ul {
+        margin: 0;
+        display: none;
+    }
+
+    #visual-arena > article li .jobdesc > ul > li {
+        margin: 0;
+    }
+
+    #visual-arena > article li .jobdesc > ul a {
+        border-radius:    0;
+        background-color: transparent;
+        display:          inline-block;
+        width:            auto;
+        height:           auto;
+        padding:          0;
+        margin-right:     1ex;
+        text-align:       left;
+        text-decoration:  underline;
+    }
+
+    #visual-arena > article footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    body {
+        margin: 2vh 2vw;
+    }
 }

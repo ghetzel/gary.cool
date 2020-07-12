@@ -19,7 +19,7 @@ page:
       abbr:  "eml"
       help:  "Email"
 
-    - title:  "@ghetzel"
+    - title:  "ghetzel"
       href:   "https://github.com/ghetzel"
       abbr:   "git"
       help:   "GitHub"
@@ -28,19 +28,15 @@ page:
     broadSkills:
     - name: Backend Development
       desc: Experience and personal interest in building flexible, high performance server-side applications with a focus on simplicity and durability.
-      rate: 5
 
     - name: Systems Administration
       desc: Extensive experience building, managing, and configuring Debian- and Red Hat-based Linux servers, both virtual and physical.
-      rate: 5
 
     - name: Frontend Development
       desc: Ability to build fast, functional browser experiences that work reliably across all major clients.
-      rate: 4
 
     - name: DevOps and Cloud Computing
       desc: Experience integrating projects with Cloud APIs. Independently building tooling for Kubernetes at home.
-      rate: 3
 
     jobs:
     - org:     PerformLine
@@ -290,12 +286,14 @@ page:
     <h1>Projects</h1>
     <p><a href="/projects">Check out my open source project portfolio.</a></p>
 
-    <h1>My Aesthetic</h1>
+<!--
+    <h1>Aesthetic</h1>
     <p>
       <a target="blank" href="https://mrandmrheatherflanagan.com">mrandmrheatherflanagan.com</a>
       <a target="blank" href="https://aboveaveragefriendships.com">aboveaveragefriendships.com</a>
       <a target="blank" href="https://garysfunrestaurantbarandgrill.com">garysfunrestaurantbarandgrill.com</a>
     </p>
+-->
   </nav>
 
   <article class="doc-body">
@@ -304,12 +302,23 @@ page:
       <span>{{ $.page.cv.blurb }}</span>
     </header>
 
+    <header class="inline-contact">
+      {{ $.page.cv.contact.address }}
+      {{ range $link := $.page.cv.links }}
+      <a
+        href="{{ $link.href }}"
+        title="{{ $link.help }}"
+        target="{{ or $link.target `self` }}"
+      >{{ if eqx $link.abbr `git` }}GitHub: {{ end }}{{ $link.title }}</a>
+      {{ end }}
+    </header>
+
     <section class="skills-interests">
       <h2>Industry Skills</h2>
       <ul>
         {{ range $si := $.page.cv.broadSkills }}
         <li>
-          <h3>{{ emoji "computer" }} {{ $si.name }} <!--<span class="rating">{{ range sequence $si.rate }}&#9733;{{ end }}{{ range sequence (subtract 5 $si.rate) }}&#9734;{{ end }}</span>--></h3>
+          <h3>{{ emoji "computer" }} {{ $si.name }}</h3>
           <small>{{ $si.desc }}</small>
         </li>
         {{ end }}
@@ -356,3 +365,5 @@ page:
     </footer>
   </article>
 </div>
+
+<script>document.querySelector('.doc-body').focus()</script>

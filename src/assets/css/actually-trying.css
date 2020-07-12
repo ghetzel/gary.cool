@@ -1,15 +1,20 @@
 html, body {
     /* thank you: http://www.patternify.com */
-    background:  #222222 repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAD0lEQVQImWNgQAX/yeAAAIHCA/0RE2WAAAAAAElFTkSuQmCC);
-    color:       #dddddd;
-    width:       100vw;
-    height:      100vh;
-    padding:     0;
-    margin:      0;
-    overflow-x:  hidden;
-    font-family: 'Open Sans', sans-serif;
-    font-size:   12pt;
+    background:      #222222 repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAD0lEQVQImWNgQAX/yeAAAIHCA/0RE2WAAAAAAElFTkSuQmCC);
+    color:           #dddddd;
+    width:           100vw;
+    height:          100vh;
+    padding:         0;
+    margin:          0;
+    overflow-x:      hidden;
+    font-family:     'Open Sans', sans-serif;
+    font-size:       12pt;
+    scroll-behavior: smooth;
+}
 
+.inline-contact {
+    display:    none;
+    text-align: center;
 }
 
 address {
@@ -144,16 +149,16 @@ a {
     text-align:      right;
 }
 
-#visual-arena > article h1 {
+#visual-arena > article header > h1 {
     margin:        1vh 0;
     margin-bottom: 0.5vh;
-    font-size:     5vh;
+    font-size:     36pt;
     font-weight:   300;
     font-family:   'Spartan', 'Open Sans', sans-serif;
     text-transform: uppercase;
 }
 
-#visual-arena > article span {
+#visual-arena > article header > span {
     display:        block;
     font-size:      14pt;
     margin-top:     0.5em;
@@ -212,7 +217,7 @@ a {
 }
 
 #visual-arena > article p {
-    margin-left:  2vw;
+    margin-left: 2vw;
     white-space: pre-wrap;
 }
 
@@ -288,15 +293,6 @@ a {
     margin-bottom: 0.25vh;
     font-size:     14pt;
     font-weight:   500;
-}
-
-#visual-arena > article .skills-interests ul > li h3 .rating {
-    float:        right;
-    width:        10vw;
-    user-select:  none;
-    text-align:   right;
-    margin:       0;
-    margin-right: 1vw;
 }
 
 #visual-arena > article footer {
