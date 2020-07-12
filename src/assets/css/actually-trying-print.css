@@ -202,3 +202,35 @@
         margin: 2vh 2vw;
     }
 }
+
+@media screen and (max-width: 799px) {
+    .inline-contact {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #visual-arena > article h2,
+    #visual-arena > article header {
+        text-align: left;
+    }
+
+    #visual-arena > article header > span {
+        width: 100%;
+    }
+
+    #visual-arena > article .jobdesc h4::before {
+        display: none;
+    }
+
+    #visual-arena > article .jobdesc h4 {
+        display:     block;
+        font-size:   12pt;
+        margin:      0;
+        font-weight: normal;
+    }
+
+    #visual-arena > article .skills-interests ul > li {
+        width: 100%;
+    }
+}
