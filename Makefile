@@ -16,3 +16,6 @@ $(DIECAST_BIN):
 
 pass:
 	htpasswd -nBC 10 $(USER)
+
+
+# ^_^
