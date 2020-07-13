@@ -8,14 +8,15 @@
     }
 
     html, body {
-        background:  white;
-        color:       initial;
-        width:       auto;
-        height:      auto;
-        padding:     auto;
-        overflow-x:  auto;
-        font-family: 'Open Sans', sans-serif;
-        font-size:   11pt;
+        background-color: white !important;
+        background-image: none;
+        color:            initial;
+        width:            auto;
+        height:           auto;
+        padding:          auto;
+        overflow-x:       auto;
+        font-family:      'Open Sans', sans-serif;
+        font-size:        11pt;
     }
 
     #visual-arena {
@@ -54,7 +55,6 @@
         font-size:      14pt;
         margin:         0 auto;
         text-transform: none;
-        width:          75%;
     }
 
     #visual-arena > article::-webkit-scrollbar {
@@ -69,12 +69,7 @@
         margin-top:       0.5em;
         margin-bottom:    0.5em;
         padding:          0;
-        text-transform:   uppercase;
-        font-weight:      500;
         color:            #333333;
-        letter-spacing:   0.25em;
-        word-spacing:     0.25em;
-        border-bottom:    2px solid #cccccc;
         text-align:       center;
     }
 
@@ -199,7 +194,7 @@
 
 @media screen and (max-width: 1279px) {
     body {
-        margin: 2vh 2vw;
+        margin:           2vh 2vw;
     }
 }
 
@@ -216,7 +211,8 @@
     }
 
     #visual-arena > article header > span {
-        width: 100%;
+        margin-bottom: 1em;
+        width:         100%;
     }
 
     #visual-arena > article .jobdesc h4::before {
