@@ -3,6 +3,7 @@
 
 GO111MODULE ?= on
 DIECAST_BIN ?= bin/diecast-$(shell uname | tr '[:upper:]' '[:lower:]')-amd64
+CONTAINER   ?= ghetzel/gary.cool:latest
 
 all: run
 
@@ -18,6 +19,7 @@ pass:
 	htpasswd -nBC 10 $(USER)
 
 docker:
-	docker build -t ghetzel/gary.cool:latest .
+	docker build -t $(CONTAINER) .
+	docker push $(CONTAINER)
 
 # ^_^
