@@ -17,5 +17,7 @@ $(DIECAST_BIN):
 pass:
 	htpasswd -nBC 10 $(USER)
 
+docker:
+	docker build -t ghetzel/gary.cool:latest .
 
 # ^_^
